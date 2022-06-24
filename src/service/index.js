@@ -1,11 +1,17 @@
 import axios from "axios";
 import { BASE_URL } from "./global";
 
-//Creamos 4 funciones list ,crear ediatr y eliminar
+//Creamos 4 funciones CRUD
 
 export const getData = async(url) => {
     try {
-        const response = await axios.get(`${BASE_URL}${url}`);
+        const response = await axios.get(`${BASE_URL}${url}`
+            /* , {
+                        headers: {
+                            Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+                        }
+                    } */
+        );
         return response.data;
     } catch (error) {
         return error;

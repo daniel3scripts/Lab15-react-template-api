@@ -7,7 +7,7 @@ import  temita from "./theme";
 function App() {
   
   return (
-    <ThemeProvider theme={temita} className="App">
+    <ThemeProvider theme={temita} >
       <Router/>
     </ThemeProvider>
   )
